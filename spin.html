@@ -1,48 +1,2172 @@
 <html>
-
 <head>
+
 <style>
+.game{
+text-align:center;
+font-size:40px;
+font-weight: bold;    
+padding: 20px 0px 40px 0px;
+}
+.table1{
+    display: table;
+    height:80%;
+    width:90%;
+    padding: 5px;
+}
+.tr{
+    display: table-row;
+    padding:5px;
+    
+}
+.td{
+    display: table-cell;
+    padding:5px;
+    width:50%;
+    border-color: black;
+    margin:5px;
+}
+
 .item{
 text-align:center;
 font-size:16px;
+}
+.circle{
+width: 500px;
+height:500px;
+background: conic-gradient(#ff5722 0% 20%);
+border-radius: 50%;
+margin:10px;
+display:block;
+text-align: center;
+}
 
+.circle1{
+width: 500px;
+height:500px;
+background: conic-gradient(#ff5722 0% 100%);
+border-radius: 50%;
+margin:10px;
+display:block;
+position: absolute;
+left: 10%;
+text-align: center;
+
+}
+.animationstart{
+    animation: rotate 5s infinite ;
+}
+.animationstop{
+    animation: rotate 10s 2;
+}
+@keyframes rotate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.circle2{
+width: 500px;
+height:500px;
+background: conic-gradient(#ff5722 0% 50%,#ffB36A 50% 100%);
+border-radius: 50%;
+margin:10px;
+display:block;
+position: absolute;
+left: 10%;
+text-align: center;
+}
+
+.circle3{
+width: 500px;
+height:500px;
+background: conic-gradient(#ff5722 0% 33%,#ffB36A 33% 66%,#ffAAC2 66% 100%);
+border-radius: 50%;
+margin:10px;
+display:block;
+position: absolute;
+left: 10%;
+text-align: center;
+}
+
+.circle4{
+width: 500px;
+height:500px;
+background: conic-gradient(#ff5722 0% 25%,#ffB36A 25% 50%,#ffAAC2 50% 75%,#ffCA12 75% 100%);
+border-radius: 50%;
+margin:10px;
+display:block;
+position: absolute;
+left: 10%;
+text-align: center;
+}
+
+.circle5{
+width: 500px;
+height:500px;
+background: conic-gradient(#ff5722 0% 20%,#ffB36A 20% 40%,#ffAAC2 40% 60%,#ffCA12 60% 80%,#BBCC12 80% 100%);
+border-radius: 50%;
+margin:10px;
+display:block;
+position: absolute;
+left: 10%;
+text-align: center;
+}
+
+.circle6{
+width: 500px;
+height:500px;
+background: conic-gradient(#ff5722 0% 17%,#ffB36A 17% 33%,#ffAAC2 33% 49%,#ffCA12 49% 65%,#BBCC12 65% 82%,#ff5562 82% 100%);
+border-radius: 50%;
+margin:10px;
+display:block;
+position: absolute;
+left: 10%;
+text-align: center;
+}
+
+.circle7{
+width: 500px;
+height:500px;
+background: conic-gradient(#ff5722 0% 14%,#ffB36A 14% 28%,#ffAAC2 28% 42%,#ffCA12 42% 56%,#BBCC12 56% 70%,#ff5562 70% 85%,#1B7562 85% 100%);
+border-radius: 50%;
+margin:10px;
+display:block;
+position: absolute;
+left: 10%;
+text-align: center;
+}
+
+.circle8{
+width: 500px;
+height:500px;
+background: conic-gradient(#ff5722 0% 12.5%,#ffB36A 12.5% 25%,#ffAAC2 25% 37.5%,#ffCA12 37.5% 50%,#BBCC12 50% 62.5%,#ff5562 62.5% 75%,#1B7562 75% 87.5%,#f32562 87.5% 100%);
+border-radius: 50%;
+margin:10px;
+display:block;
+position: absolute;
+left: 10%;
+text-align: center;
+}
+.circle9{
+width: 500px;
+height:500px;
+background: conic-gradient(#ff5722 0% 11%,#ffB36A 11% 22%,#ffAAC2 22% 33%,#ffCA12 33% 44%,#BBCC12 44% 55%,#ff5562 55% 66%,#1B7562 66% 77%,#f32562 77% 88%, #712562 88% 100%);
+border-radius: 50%;
+margin:10px;
+display:block;
+position: absolute;
+left: 10%;
+text-align: center;
+}
+.circle10{
+width: 500px;
+height:500px;
+background: conic-gradient(#ff5722 0% 10%,#ffB36A 10% 20%,#ffAAC2 20% 30%,#ffCA12 30% 40%,#BBCC12 40% 50%,#ff5562 50% 60%,#1B7562 60% 70%,#f32562 70% 80%, #712562 80% 90%,#33f562 90% 100%);
+border-radius: 50%;
+margin:10px;
+display:block;
+position: absolute;
+left: 10%;
+text-align: center;
+}
+.circle11{
+width: 500px;
+height:500px;
+background: conic-gradient(#ff5722 0% 9%,#ffB36A 9% 18%,#ffAAC2 18% 27%,#ffCA12 27% 36%,#BBCC12 36% 45%,#ff5562 45% 54%,#1B7562 54% 63%,#f32562 63% 72%, #712562 72% 81%,#33f562 81% 90.5%,#33B112 90.5% 100%);
+border-radius: 50%;
+margin:10px;
+display:block;
+position: absolute;
+left: 10%;
+text-align: center;
+}
+.circle12{
+width: 500px;
+height:500px;
+background: conic-gradient(#ff5722 0% 8.3%,#ffB36A 8.3% 16.6%,#ffAAC2 16.6% 24.9%,#ffCA12 24.9% 34.2%,#BBCC12 34.2% 42.5%,#ff5562 42.5% 50.8%,#1B7562 50.8% 59.1%,#f32562 59.1% 67.4%, #712562 67.4% 75.7%,#33f562 75.7% 84%,#33B112 84% 92%,#FEA562 92% 100%);
+border-radius: 50%;
+margin:10px;
+display:block;
+position: absolute;
+left: 10%;
+text-align: center;
+}
+
+.circle13{
+width: 500px;
+height:500px;
+background: conic-gradient(#ff5722 0% 7.7%,#ffB36A 7.7% 15.4%,#ffAAC2 15.4% 23.1%,#ffCA12 23.1% 30.8%,#BBCC12 30.8% 38.5%,#ff5562 38.5% 46.2%,#1B7562 46.2% 53.9%,#f32562 53.9% 61.6%, #712562 61.6% 69.3%,#33f562 69.3% 77%,#33B112 77% 84.7%,#FEA562 84.7% 92.4%,#AEA562 92.4% 100%);
+border-radius: 50%;
+margin:10px;
+display:block;
+position: absolute;
+left: 10%;
+text-align: center;
+}
+
+.circle14{
+width: 500px;
+height:500px;
+background: conic-gradient(#ff5722 0% 7.15%,#ffB36A 7.15% 14.3%,#ffAAC2 14.3% 21.45%,#ffCA12 21.45% 28.6%,#BBCC12 28.6% 35.75%,#ff5562 35.75% 42.9%,#1B7562 42.9% 50%,#f32562 50% 57.15%, #712562 57.15% 64.3%,#33f562 64.3% 71.45%,#33B112 71.45% 78.6%,#FEA562 78.6% 85.75%,#AEA562 85.75% 92.9%,#A51562 92.9% 100%);
+border-radius: 50%;
+margin:10px;
+display:block;
+position: absolute;
+left: 10%;
+text-align: center;
+}
+.circle15{
+width: 500px;
+height:500px;
+background: conic-gradient(#ff5722 0% 6.7%,#ffB36A 6.7% 13.4%,#ffAAC2 13.4% 20.1%,#ffCA12 20.1% 26.8%,#BBCC12 26.8% 33.5%,#ff5562 33.5% 40.2%,#1B7562 40.2% 46.9%,#f32562 46.9% 53.6%, #712562 53.6% 60.3%,#33f562 60.3% 67%,#33B112 67% 73.7%,#FEA562 73.7% 80.4%,#AEA562 80.4% 87.1%,#A51562 87.1% 93.8%,#C1B562 93.8% 100%);
+border-radius: 50%;
+margin:10px;
+display:block;
+position: absolute;
+left: 10%;
+text-align: center;
+}
+.circle16{
+width: 500px;
+height:500px;
+background: conic-gradient(#ff5722 0% 6.25%,#ffB36A 6.25% 12.5%,#ffAAC2 12.5% 18.75%,#ffCA12 18.75% 25%,#BBCC12 25% 31.25%,#ff5562 31.25% 37.5%,#1B7562 37.5% 44.75%,#f32562 44.75% 51%, #712562 51% 57.25%,#33f562 57.25% 63.5%,#33B112 63.5% 69.75%,#FEA562 69.75% 76%,#AEA562 76% 82.25%,#A51562 82.25% 88.5%,#C1B562 88.5% 94.75%,#EFA362 94.75% 100%);
+border-radius: 50%;
+margin:10px;
+display:block;
+position: absolute;
+left: 10%;
+text-align: center;
+}
+.circle17{
+width: 500px;
+height:500px;
+background: conic-gradient(#ff5722 0% 5.9%,#ffB36A 5.9% 11.8%,#ffAAC2 11.8% 17.7%,#ffCA12 17.7% 23.6%,#BBCC12 23.6% 29.5%,#ff5562 29.5% 35.4%,#1B7562 35.4% 41.3%,#f32562 41.3% 47.2%, #712562 47.2% 53.1%,#33f562 53.1% 59%,#33B112 59% 64.9%,#FEA562 64.9% 70.8%,#AEA562 70.8% 76.7%,#A51562 76.7% 82.6%,#C1B562 82.6% 88.5%,#EFA362 88.5% 94.4%,#33C562 94.4% 100%);
+border-radius: 50%;
+margin:10px;
+display:block;
+position: absolute;
+left: 10%;
+text-align: center;
+}
+.circle18{
+width: 500px;
+height:500px;
+background: conic-gradient(#ff5722 0% 5.5%,#ffB36A 5.5% 11%,#ffAAC2 11% 16.5%,#ffCA12 16.5% 22%,#BBCC12 22% 27.5%,#ff5562 27.5% 33%,#1B7562 33% 38.5%,#f32562 38.5% 44%, #712562 44% 49.5%,#33f562 49.5% 55%,#33B112 55% 60.5%,#FEA562 60.5% 66%,#AEA562 66% 71.5%,#A51562 71.5% 77%,#C1B562 77% 83%,#EFA362 83% 88.5%,#33C562 88.5% 94%,#EEF562 94% 100%);
+border-radius: 50%;
+margin:10px;
+display:block;
+position: absolute;
+left: 10%;
+text-align: center;
+}
+.circle19{
+width: 500px;
+height:500px;
+background: conic-gradient(#ff5722 0% 5.25%,#ffB36A 5.25% 10.5%,#ffAAC2 10.5% 15.75%,#ffCA12 15.75% 21%,#BBCC12 21% 26.25%,#ff5562 26.25% 31.5%,#1B7562 31.5% 36.75%,#f32562 36.75% 42%, #712562 42% 47.25%,#33f562 47.25% 52.5%,#33B112 52.5% 57.75%,#FEA562 57.75% 63%,#AEA562 63% 68.25%,#A51562 68.25% 73.5%,#C1B562 73.5% 78.75%,#EFA362 78.75% 84%,#33C562 84% 89.25%,#EEF562 89.25% 95%,#FB5162 95% 100%);
+border-radius: 50%;
+margin:10px;
+display:block;
+position: absolute;
+left: 10%;
+text-align: center;
+}
+.circle20{
+width: 500px;
+height:500px;
+background: conic-gradient(#ff5722 0% 5%,#ffB36A 5% 10%,#ffAAC2 10% 15%,#ffCA12 15% 20%,#BBCC12 20% 25%,#ff5562 25% 30%,#1B7562 30% 35%,#f32562 35% 40%, #712562 40% 45%,#33f562 45% 50%,#33B112 50% 55%,#FEA562 55% 60%,#AEA562 60% 65%,#A51562 65% 70%,#C1B562 70% 75%,#EFA362 75% 80%,#33C562 80% 85%,#EEF562 85% 90%,#FB5162 90% 95%,#6BCF62 95% 100%);
+border-radius: 50%;
+margin:10px;
+display:block;
+position: absolute;
+left: 10%;
+text-align: center;
 }
 .circle{
 width: 300px;
 height:300px;
-background: conic-gradient(#ff5722 0% 20%,#ffB36A 20% 40%,#ffAAC2 40% 60%,#ffCA12 60% 80%,#ff5562 80% 100%);
+background: conic-gradient(#ff5722 0% 100%);
 border-radius: 50%;
 margin:10px;
-display:inline-block;
+display:block;
+text-align: center;
 }
-.circle1{
-width: 10px;
-height:10px;
-background: conic-gradient(#aaaaaa 0% 100%);
-border-radius: 50%;
-margin:5px;
-display:inline-block;
+.scircle{
+width: 40px;
+height:40px;
+/*background: conic-gradient(#000000 0% 100%);
+border-radius: 50%;*/
+box-shadow:-2px 2px 0 black;
+margin:10px;
+display:block;
+position: absolute;
+text-align: center;
+top:25em;
+left:41.3em;
+transition: .5s;
+transform: rotate(45deg);
+}
+.left{
+    width: 100px;
+    height: 100px;
+    transition:.5s;
+    float:left;
+    box-shadow:-2px 2px 0 black;
+    top:15em;
+    left:31.5em;
+}
+.left{
+    transform: rotate(45deg);
+}
+/*arrow design*/
+.scircle1{
+height: 30px;
+width:30px;
+border: rgb(14, 15, 14);
+color: rgb(246, 240, 240);
+border-width: 0 13px 13px 0;
+display:block;
+position: absolute;
+padding:3px;
+transform: rotate(135deg);
+top:15em;
+left:31.5em;
 }
 
 .area{
 text-align:center;
 }
+/* style to place labels 1-20 in each name adding*/
+.label1{
+ font-weight: bold;
+width: 50px;
+ height:40px; 
+ border-radius: 50%;
+ border-color: black;
+ background-color: white;
+ position:absolute;
+text-align: center;
+align-items: center;
+justify-content: center; 
+ }
+ .case1-label1{
+    top:4em;
+    left:14em;
+ }
+
+.label2{
+ font-weight: bold;
+ width: 50px;
+ height:40px;
+ border-radius: 50%;
+ border-color: black;
+ background-color: white;
+ position:absolute;
+text-align: center;
+}
+.case2-label1{
+    top:15em;
+    left:2em;
+}
+ .case2-label2{
+    top:15em;
+    left:26em;
+}
+
+.label3{
+ font-weight: bold;
+ width: 50px;
+ height:40px;
+ border-radius: 50%;
+ border-color: black;
+ background-color: white;
+ position:absolute;
+
+}
+.case3-label1{
+    top:8em;
+    left:4em;
+ }
+ .case3-label2{
+    top:8em;
+    left:24em;
+ }
+ .case3-label3{
+    top:27em;
+    left:14em;
+ }
+
+.label4{
+ font-weight: bold;
+ width: 50px;
+ height:40px;
+ border-radius: 50%;
+ border-color: black;
+ background-color: white;
+ position:absolute;
+ }
+.case4-label1{
+    top:7em;
+    left:4em;
+ }
+ .case4-label2{
+    top:7em;
+    left:24em;
+ }
+ .case4-label3{
+    top:23em;
+    left:23em;
+ }
+ .case4-label4{
+    top:23em;
+    left:5em;
+ }
+.label5{
+ font-weight: bold;
+ width: 40px;
+ height:40px;
+ border-radius: 50%;
+ border-color: black;
+ background-color: white;
+ position: absolute;
+}
+.case5-label1{
+    top:4em;
+    left:7em;
+ }
+  .case5-label2{
+    top:4em;
+    left:21em;
+ }
+ .case5-label3{
+    top:18em;
+    left:25.5em;
+ }
+ .case5-label4{
+    top:18em;
+    left:4em;
+ }
+ .case5-label5{
+    top:27em;
+    left:15em;
+ }
+.label6{
+ font-weight: bold;
+ width: 40px;
+ height:40px;
+ border-radius: 50%;
+ border-color: black;
+ background-color: white;
+ position: absolute;
+}
+.case6-label1{
+    top:4em;
+    left:7em;
+ }
+ .case6-label2{
+    top:4em;
+    left:21em;
+ }
+ .case6-label3{
+    top:15em;
+    left:26em;
+ }
+ .case6-label4{
+    top:25.7em;
+    left:21em;    
+}
+ .case6-label5{
+    top:26em;
+    left:9em;
+ }
+ .case6-label6{
+    top:16em;
+    left:2em;
+ }
+.label7{
+ font-weight: bold;
+ width: 40px;
+ height:40px;
+ border-radius: 50%;
+ border-color: black;
+ background-color: white;
+position: absolute;
+}
+.case7-label1{
+    top:3em;
+    left:19.5em;
+ }
+ .case7-label2{
+    top:12em;
+    left:26em;  
+ }
+ .case7-label3{
+    top:22em;
+    left:24em;
+ }
+ .case7-label4{
+    top:27em;
+    left:14.5em;
+}
+ .case7-label5{
+    top:23em;
+    left:5.5em;
+ }
+ .case7-label6{
+    top:13em;
+    left:1.5em;
+
+ }
+ .case7-label7{
+    top:3.5em;
+    left:8em;
+ }
+.label8{
+ font-weight: bold;
+ width: 40px;
+ height:40px;
+ border-radius: 50%;
+ border-color: black;
+ background-color: white;
+position: absolute;
+}
+.case8-label1{
+    top:3em;
+    left:19em;
+ }
+ .case8-label2{
+    top:10em;
+    left:25.5em;  
+ }
+ .case8-label3{
+    top:19em;
+    left:23.5em;
+ }
+ .case8-label4{
+    top:26em;
+    left:18.5em;
+}
+ .case8-label5{
+    top:26em;
+    left:9em;
+ }
+ .case8-label6{
+    top:19em;
+    left:2.5em;
+
+ }
+ .case8-label7{
+    top:10em;
+    left:2.5em;
+ }
+ .case8-label8{
+    top:3em;
+    left:9.5em;
+ }
+.label9{
+ font-weight: bold;
+ width: 40px;
+ height:40px;
+ border-radius: 50%;
+ border-color: black;
+ background-color: white;
+ position: absolute;
+}
+.case9-label1{
+    top:2.5em;
+    left:18.5em;
+ }
+ .case9-label2{
+    top:8.5em;
+    left:25em;  
+ }
+ .case9-label3{
+    top:16.3em;
+    left:26em;
+ }
+ .case9-label4{
+    top:24em;
+    left:22em;
+}
+ .case9-label5{
+    top:27.5em;
+    left:14.5em;
+ }
+ .case9-label6{
+    top:24.5em;
+    left:6.5em;
+ }
+ .case9-label7{
+    top:17.5em;
+    left:2em;
+ }
+ .case9-label8{
+    top:9em;
+    left:2.8em;    
+ }
+  .case9-label9{
+    top:3em;
+    left:9.5em;
+ }
+.label10{
+ font-weight: bold;
+ width: 40px;
+ height:40px;
+ border-radius: 50%;
+ border-color: black;
+ background-color: white;
+ position: absolute;
+}
+.case10-label1{
+    top:2.5em;
+    left:18.5em;
+ }
+ .case10-label2{
+    top:7.5em;
+    left:24em;  
+ }
+ .case10-label3{
+    top:15em;
+    left:26.5em;
+ }
+ .case10-label4{
+    top:22em;
+    left:24em;
+}
+ .case10-label5{
+    top:26.5em;
+    left:18em;    
+ }
+ .case10-label6{
+    top:26.5em;
+    left:10.5em;
+ }
+ .case10-label7{
+    top:22em;
+    left:4em;
+ }
+ .case10-label8{
+    top:15em;
+    left:1.5em;
+}
+  .case10-label9{
+    top:7em;
+    left:4em;
+ }
+  .case10-label10{
+    top:2.5em;
+    left:10.5em;
+ }
+.label11{
+ font-weight: bold;
+ width: 40px;
+ height:40px;
+ border-radius: 50%;
+ border-color: black;
+ background-color: white;
+position: absolute;
+}
+.case11-label1{
+    top:2.5em;
+    left:18em;
+ }
+ .case11-label2{
+    top:6.3em;
+    left:23.5em;  
+ }
+ .case11-label3{
+    top:13em;
+    left:26.5em;
+ }
+ .case11-label4{
+    top:19.6em;
+    left:25.7em;
+}
+ .case11-label5{
+    top:25em;
+    left:22em;    
+ }
+ .case11-label6{
+    top:27.5em;
+    left:15em;
+ }
+ .case11-label7{
+    top:25.5em;
+    left:8em;
+ }
+ .case11-label8{
+    top:20.5em;
+    left:3.3em;    
+}
+  .case11-label9{
+    top:13.7em;
+    left:1.8em;
+ }
+  .case11-label10{
+    top:7em;
+    left:4em;
+ }
+ .case11-label11{
+    top:2.5em;
+    left:10.5em;
+ }
+.label12{
+ font-weight: bold;
+ width: 40px;
+ height:40px;
+ border-radius: 50%;
+ border-color: black;
+ background-color: white;
+ position: absolute;
+}
+.case12-label1{
+    top:2.5em;
+    left:18em;
+ }
+ .case12-label2{
+    top:6.3em;
+    left:23.5em;  
+ }
+ .case12-label3{
+    top:11.5em;
+    left:26em;
+ }
+ .case12-label4{
+    top: 18.2em;
+    left:26em;
+}
+ .case12-label5{
+    top:24em;
+    left:23em;    
+ }
+ .case12-label6{
+    top:27em;
+    left:16.8em;
+ }
+ .case12-label7{
+    top:26.5em;
+    left:10.5em;
+ }
+ .case12-label8{
+    top:23.5em;
+    left:5.5em;    
+}
+  .case12-label9{
+    top:17.5em;
+    left:2.5em;
+ }
+  .case12-label10{
+    top:11em;
+    left:2.5em;
+ }
+ .case12-label11{
+    top:5.4em;
+    left:6em;
+ }
+  .case12-label12{
+    top:2.2em;
+    left:11.5em;
+ }
+.label13{
+ font-weight: bold;
+ width: 40px;
+ height:40px;
+ border-radius: 50%;
+ border-color: black;
+ background-color: white;
+ position: absolute;
+}
+.case13-label1{
+    top:2em;
+    left:17.5em;
+ }
+ .case13-label2{
+    top:5.5em;
+    left:22.5em;  
+ }
+ .case13-label3{
+    top:10em;
+    left:26em;
+ }
+ .case13-label4{
+    top: 16em;
+    left:26.5em;
+}
+ .case13-label5{
+    top:22em;
+    left:25em;    
+ }
+ .case13-label6{
+    top:26em;
+    left:20.5em;
+ }
+ .case13-label7{
+    top:27.5em;
+    left:14.5em;
+ }
+ .case13-label8{
+    top:26em;
+    left:8.5em;    
+}
+  .case13-label9{
+    top:21.8em;
+    left:4em;
+ }
+  .case13-label10{
+    top:16em;
+    left:2em;
+ }
+ .case13-label11{
+    top:10em;
+    left:2.5em;
+ }
+  .case13-label12{
+    top:5.4em;
+    left:6em;
+ }
+ .case13-label13{
+    top:2.2em;
+    left:11.5em;
+ }
+.label14{
+ font-weight: bold;
+ width: 40px;
+ height:40px;
+ border-radius: 50%;
+ border-color: black;
+ background-color: white;
+ position: absolute;
+}
+.case14-label1{
+    top:2em;
+    left:17em;
+ }
+ .case14-label2{
+    top:5em;
+    left:22em;  
+ }
+ .case14-label3{
+    top:9.5em;
+    left:25em;
+ }
+ .case14-label4{
+    top: 14.5em;
+    left:26.5em;
+}
+ .case14-label5{
+    top:20.2em;
+    left:26em;    
+ }
+ .case14-label6{
+    top:24.7em;
+    left:22.3em;
+ }
+ .case14-label7{
+    top:27em;
+    left:17.3em;
+ }
+ .case14-label8{
+    top:27em;
+    left:11.6em;    
+}
+  .case14-label9{
+    top:24.5em;
+    left:6.7em;
+ }
+  .case14-label10{
+    top:20.3em;
+    left:2.8em;
+ }
+ .case14-label11{
+    top:14.6em;
+    left:1.8em;
+ }
+  .case14-label12{
+    top:9.3em;
+    left:3.3em;
+ }
+ .case14-label13{
+    top:5em;
+    left:6.5em;
+ }
+  .case14-label14{
+    top:2.2em;
+    left:11.5em;
+ }
+.label15{
+ font-weight: bold;
+ width: 40px;
+ height:40px;
+ border-radius: 50%;
+ border-color: black;
+ background-color: white;
+ position:absolute;
+}
+.case15-label1{
+    top:2em;
+    left:17em;
+ }
+ .case15-label2{
+    top:4.5em;
+    left:21.6em;  
+ }
+ .case15-label3{
+    top:8.5em;
+    left:24.6em;
+ }
+ .case15-label4{
+    top: 13.3em;
+    left:26.3em;
+}
+ .case15-label5{
+    top:18.7em;
+    left:26.5em;    
+ }
+ .case15-label6{
+    top:23.3em;
+    left:23.8em;
+ }
+ .case15-label7{
+    top:26.3em;
+    left:19.5em;
+ }
+ .case15-label8{
+    top:27.5em;
+    left:14.3em;    
+}
+  .case15-label9{
+    top:26.2em;
+    left:9em;
+ }
+  .case15-label10{
+    top:23em;
+    left:5em;
+ }
+ .case15-label11{
+    top:18.4em;
+    left:2.4em;
+ }
+  .case15-label12{
+    top:13em;
+    left:2em;
+ }
+ .case15-label13{
+    top:8em;
+    left:4em;
+ }
+  .case15-label14{
+    top:4.5em;
+    left:7.5em;
+ } 
+ .case15-label15{
+    top:2.4em;
+    left:12em;
+ }
+.label16{
+ font-weight: bold;
+ width: 40px;
+ height:40px;
+ border-radius: 50%;
+ border-color: black;
+ background-color: white;
+ position: absolute;
+}
+.case16-label1{
+    top:2.2em;
+    left:16.6em;
+ }
+ .case16-label2{
+    top:4em;
+    left:21.1em;  
+ }
+ .case16-label3{
+    top:7.8em;
+    left:24.6em;
+ }
+ .case16-label4{
+    top: 12.3em;
+    left:26.5em;
+}
+ .case16-label5{
+    top:17em;
+    left:27em;    
+ }
+ .case16-label6{
+    top:21.6em;
+    left:25em;
+ }
+ .case16-label7{
+    top:25.5em;
+    left:21.2em;
+ }
+ .case16-label8{
+    top:27.5em;
+    left:16em;    
+}
+  .case16-label9{
+    top:27em;
+    left:11em;
+ }
+  .case16-label10{
+    top:24.5em;
+    left:6.6em;
+ }
+ .case16-label11{
+    top:21em;
+    left:3.2em;
+ }
+  .case16-label12{
+    top:16.3em;
+    left:1.8em;
+ }
+ .case16-label13{
+    top:11.3em;
+    left:2.3em;
+ }
+  .case16-label14{
+    top:6.8em;
+    left:4.5em;
+ } 
+ .case16-label15{
+    top:3.7em;
+    left:8.1em;
+ }
+  .case16-label16{
+    top:2.3em;
+    left:12.5em;
+ }
+.label17{
+ font-weight: bold;
+ width: 40px;
+ height:40px;
+ border-radius: 50%;
+ border-color: black;
+ background-color: white;
+ position:absolute;
+}
+.case17-label1{
+    top:2.2em;
+    left:16.6em;
+ }
+ .case17-label2{
+    top:4em;
+    left:21.1em;  
+ }
+ .case17-label3{
+    top:7.2em;
+    left:24.3em;
+ }
+ .case17-label4{
+    top: 11.2em;
+    left:26.3em;
+}
+ .case17-label5{
+    top:15.8em;
+    left:27em;    
+ }
+ .case17-label6{
+    top:20.4em;
+    left:25.8em;
+ }
+ .case17-label7{
+    top:24.1em;
+    left:23em;
+ }
+ .case17-label8{
+    top:26.5em;
+    left:18.9em;    
+}
+  .case17-label9{
+    top:27.5em;
+    left:14.2em;
+ }
+  .case17-label10{
+    top:26.7em;
+    left:9.7em;
+ }
+ .case17-label11{
+    top:24em;
+    left:5.5em;
+ }
+  .case17-label12{
+    top:20.2em;
+    left:2.9em;
+ }
+ .case17-label13{
+    top:15.6em;
+    left:1.8em;
+ }
+  .case17-label14{
+    top:11em;
+    left:2.5em;
+ } 
+ .case17-label15{
+    top:6.8em;
+    left:4.5em;
+ }
+  .case17-label16{
+    top:3.7em;
+    left:8.1em;
+ }
+ .case17-label17{
+    top:2.3em;
+    left:12.5em;
+ }
+.label18{
+ font-weight: bold;
+ width: 40px;
+ height:40px;
+ border-radius: 50%;
+ border-color: black;
+ background-color: white;
+ position: absolute;
+}
+.case18-label1{
+    top:2em;
+    left:16.3em;
+ }
+ .case18-label2{
+    top:3.5em;
+    left:20.6em;  
+ }
+ .case18-label3{
+    top:6.4em;
+    left:23.8em;
+ }
+ .case18-label4{
+    top: 10em;
+    left:25.5em;
+}
+ .case18-label5{
+    top:14.3em;
+    left:27em;    
+ }
+ .case18-label6{
+    top:18.5em;
+    left:26.3em;
+ }
+ .case18-label7{
+    top:22.5em;
+    left:24.4em;
+ }
+ .case18-label8{
+    top:25.7em;
+    left:21.3em;    
+}
+  .case18-label9{
+    top:27.3em;
+    left:17.1em;
+ }
+  .case18-label10{    
+    top:27.5em;
+    left:12.7em;
+ }
+ .case18-label11{
+    top:25.9em;
+    left:8.3em;
+ }
+  .case18-label12{
+    top:23.2em;
+    left:5em;
+ }
+ .case18-label13{
+    top:19.3em;
+    left:2.9em;
+ }
+  .case18-label14{
+    top:15.2em;
+    left:1.6em;
+ } 
+ .case18-label15{
+    top:10.6em;
+    left:2.2em;
+ }
+  .case18-label16{
+    top:6.8em;
+    left:4.5em;
+ }
+ .case18-label17{
+    top:4em;
+    left:8em;    
+ }
+  .case18-label18{
+    top:2.1em;
+    left:12.2em;
+ }
+.label19{
+ font-weight: bold;
+ width: 40px;
+ height:40px;
+ border-radius: 50%;
+ border-color: black;
+ background-color: white;
+ position: absolute;
+}
+.case19-label1{
+    top:1.7em;
+    left:16.2em;
+ }
+ .case19-label2{
+    top:3.3em;
+    left:20.1em;  
+ }
+ .case19-label3{
+    top:6em;
+    left:23.3em;
+ }
+ .case19-label4{
+    top: 9.5em;
+    left:25.6em;
+}
+ .case19-label5{
+    top:13.5em;
+    left:27em;    
+ }
+ .case19-label6{
+    top:17.5em;
+    left:26.5em;
+ }
+ .case19-label7{
+    top:21.4em;
+    left:25em;
+ }
+ .case19-label8{
+    top:24.7em;
+    left:22.3em;    
+}
+  .case19-label9{
+    top:26.7em;
+    left:18.6em;
+ }
+  .case19-label10{    
+    top:27.5em;
+    left:14.4em;
+ }
+ .case19-label11{
+    top:26.7em;
+    left:10.3em;
+ }
+  .case19-label12{
+    top:24.8em;
+    left:6.6em;
+ }
+ .case19-label13{
+    top:21.8em;
+    left:3.5em;
+ }
+  .case19-label14{
+    top:17.9em;
+    left:2em;
+ } 
+ .case19-label15{
+    top:13.6em;
+    left:1.5em;
+ }
+  .case19-label16{
+    top:9.6em;
+    left:2.7em;
+ }
+ .case19-label17{
+    top:6.2em;
+    left:5em;  
+ }
+  .case19-label18{
+    top:3.4em;
+    left:8.3em;   
+ }
+ .case19-label19{
+    top:2em;
+    left:12.4em;
+ }
+.label20{
+ font-weight: bold;
+ width: 40px;
+ height:40px;
+ border-radius: 50%;
+ border-color: black;
+ background-color: white;
+ position: absolute;
+}
+ .case20-label1{
+    top:1.5em;
+    left:16em;
+ }
+ .case20-label2{
+    top:3em;
+    left:20em;
+ }
+ .case20-label3{
+    top:5.3em;
+    left:23.2em;
+ }
+ .case20-label4{
+    top:8.6em;
+    left:25.8em;
+}
+ .case20-label5{
+    top:12.5em;
+    left:27.6em;
+ }
+ .case20-label6{
+    top:16.5em;
+    left:27.5em;
+ }
+ .case20-label7{
+    top:20.5em;
+    left:26em;
+ }
+ .case20-label8{
+    top:23.7em;
+    left:23.6em;
+ }
+ .case20-label9{
+    top:26em;
+    left:20.3em;
+ }
+ .case20-label10{
+    top:27.5em;
+    left:16.5em;
+ }
+ .case20-label11{
+    top:27.5em;
+    left:12.5em;
+ }
+ .case20-label12{
+    top:26.3em;
+    left:8.5em;
+ }
+ .case20-label13{
+    top:24em;
+    left:5.1em;
+ }
+ .case20-label14{
+    top:20.5em;
+    left:2.8em;
+ }
+ .case20-label15{
+    top:16.6em;
+    left:1.3em;
+ }
+ .case20-label16{
+    top:12.5em;
+    left:1.3em;
+ }
+ .case20-label17{
+    top:8.6em;
+    left:2.5em;
+ }
+ .case20-label18{
+    top:5.2em;
+    left:5.2em;
+ }
+ .case20-label19{
+    top:2.7em;
+    left:8.4em;
+ }
+ .case20-label20{
+    top:1.4em;
+    left:12.3em;
+ }
 </style>
+
+
+
+<script>
+var n=0; //dynamic static counter initiallization
+var k=0;
+var ope=new Array();  //check the stmt validity and increment n by 1
+//t=document.write("Spin started");
+//document.body.appendChild(t);
+
+
+
+
+function newname(){
+n=parseInt(n)+1; //dynamic static counter increment
+//alert("hi");
+
+//convert ope to dynamic array
+ope[k++]= document.getElementById('name').value;
+//alert(ope.length);
+if(n<=20 && ope.length<=20)
+{
+for(i=0;i<ope.length;i++)
+{
+    //alert(ope[i]);
+}
+//k=parseInt(k)+1;
+
+//convert ope array to Table dynamic create for ope array
+//|No.| Participaten Name|
+var table1="<table><tr>";
+var rowSize=2;
+ope.forEach((value,i)=>{
+    //alert(i+" "+ value);
+    table1+=`<td>${i+1}</td>`;
+    table1+=`<td>${value}</td>`;
+    table1+=`</tr><tr>`;
+});
+table1+="</tr></table>";    
+document.getElementById('table1').innerHTML=table1;
+
+
+
+//alert("Name:"+" "+ope);
+
+//create dynamic circles each time and adding number to it 1,2,3,4,...20
+//let L=document.createElement('p');
+let c1=document.createElement('div');
+c1.classList.add("circle1");
+//L.classList.add('scircle');
+let L1=document.createElement('label');
+L1.innerText="1";
+//c1.appendChild(L,L1);
+//c1.appendChild(L);
+L1.classList.add("label1","case1-label1");
+//L1.classList.add('case1');
+let c2=document.createElement('div');
+c2.classList.add("circle2");
+//c2.appendChild('scircle');
+let L2=document.createElement('label');
+L2.innerText="2";
+//c2.appendChild(L,L1,L2);
+//c2.appendChild(L2);
+L2.classList.add("label2","case2-label2");
+let c3=document.createElement('div');
+c3.classList.add('circle3');
+let L3=document.createElement('label');
+L3.innerText="3";
+//c3.appendChild(L,L1,L2,L3);
+L3.classList.add("label3","case3-label3");
+let c4=document.createElement('div');
+c4.classList.add('circle4');
+let L4=document.createElement('label');
+L4.innerText="4";
+//c4.appendChild(L,L1,L2,L3,L4);
+L4.classList.add("label4","case4-label4");
+let c5=document.createElement('div');
+c5.classList.add('circle5');
+let L5=document.createElement('label');
+L5.innerText="5";
+//c5.appendChild(L,L1,L2,L3,L4,L5);
+L5.classList.add("label5","case5-label5");
+let c6=document.createElement('div');
+c6.classList.add('circle6');
+let L6=document.createElement('label');
+L6.innerText="6";
+//c6.appendChild(L,L1,L2,L3,L4,L5,L6);
+L6.classList.add("label6","case6-label6");
+let c7=document.createElement('div');
+c7.classList.add('circle7');
+let L7=document.createElement('label');
+L7.innerText="7";
+//c7.appendChild(L,L1,L2,L3,L4,L5,L6,L7);
+L7.classList.add("label7","case7-label7");
+let c8=document.createElement('div');
+c8.classList.add('circle8');
+let L8=document.createElement('label');
+L8.innerText="8";
+//c8.appendChild(L,L1,L2,L3,L4,L5,L6,L7,L8);
+L8.classList.add("label8","case8-label8");
+let c9=document.createElement('div');
+c9.classList.add('circle9');
+let L9=document.createElement('label');
+L9.innerText="9";
+//c9.appendChild(L,L1,L2,L3,L4,L5,L6,L7,L8,L9);
+L9.classList.add("label9","case9-label9");
+let c10=document.createElement('div');
+c10.classList.add('circle10');
+let L10=document.createElement('label');
+L10.innerText="10";
+//c10.appendChild(L,L1,L2,L3,L4,L5,L6,L7,L8,L9,L10);
+L10.classList.add("label10","case10-label10");
+let c11=document.createElement('div');
+c11.classList.add('circle11');
+let L11=document.createElement('label');
+L11.innerText="11";
+//c11.appendChild(L,L1,L2,L3,L4,L5,L6,L7,L8,L9,L10,L11);
+L11.classList.add("label11","case11-label11");
+let c12=document.createElement('div');
+c12.classList.add('circle12');
+let L12=document.createElement('label');
+L12.innerText="12";
+//c12.appendChild(L,L1,L2,L3,L4,L5,L6,L7,L8,L9,L10,L11,L12);
+L12.classList.add("label12","case12-label12");
+let c13=document.createElement('div');
+c13.classList.add('circle13');
+let L13=document.createElement('label');
+L13.innerText="13";
+//c13.appendChild(L,L1,L2,L3,L4,L5,L6,L7,L8,L9,L10,L11,L12,L13);
+L13.classList.add("label13","case13-label13");
+let c14=document.createElement('div');
+c14.classList.add('circle14');
+let L14=document.createElement('label');
+L14.innerText="14";
+//c14.appendChild(L,L1,L2,L3,L4,L5,L6,L7,L8,L9,L10,L11,L12,L13,L14);
+L14.classList.add("label14","case14-label14");
+let c15=document.createElement('div');
+c15.classList.add('circle15');
+let L15=document.createElement('label');
+L15.innerText="15";
+//c15.appendChild(L,L1,L2,L3,L4,L5,L6,L7,L8,L9,L10,L11,L12,L13,L14,L15);
+L15.classList.add("label15","case15-label15");
+let c16=document.createElement('div');
+c16.classList.add('circle16');
+let L16=document.createElement('label');
+L16.innerText="16";
+//c16.appendChild(L,L1,L2,L3,L4,L5,L6,L7,L8,L9,L10,L11,L12,L13,L14,L15,L16);
+L16.classList.add("label16","case16-label16");
+let c17=document.createElement('div');
+c17.classList.add('circle17');
+let L17=document.createElement('label');
+L17.innerText="17";
+//c17.appendChild(L,L1,L2,L3,L4,L5,L6,L7,L8,L9,L10,L11,L12,L13,L14,L15,L16,L17);
+L17.classList.add("label17","case17-label17");
+let c18=document.createElement('div');
+c18.classList.add('circle18');
+let L18=document.createElement('label');
+L18.innerText="18";
+//c18.appendChild(L,L1,L2,L3,L4,L5,L6,L7,L8,L9,L10,L11,L12,L13,L14,L15,L16,L17,L18);
+L18.classList.add("label18","case18-label18");
+let c19=document.createElement('div');
+c19.classList.add('circle19');
+let L19=document.createElement('label');
+L19.innerText="19";
+//c19.appendChild(L,L1,L2,L3,L4,L5,L6,L7,L8,L9,L10,L11,L12,L13,L14,L15,L16,L17,L18,L19);
+L19.classList.add("label19","case19-label19");
+let c20=document.createElement('div');
+c20.classList.add('circle20');
+let L20=document.createElement('label');
+L20.innerText="20";
+//c20.appendChild(L,L1,L2,L3,L4,L5,L6,L7,L8,L9,L10,L11,L12,L13,L14,L15,L16,L17,L18,L19,L20);
+L20.classList.add("label20","case20-label20");
+
+let s1=document.querySelector('.table1');
+//let u=document.append(c1,n.parentElement.firstElementChild.firstChild)
+console.log(s1);
+console.log(s1.firstElementChild.firstElementChild);
+let u=s1.firstElementChild.firstElementChild;
+//u.appendChild(L);
+  //=document.createElement('div');;
+//alert("N"+" "+ n);
+switch (n) {
+    case 1:
+       //c1.innerText='Spin Created';
+       //document.body.appendChild
+       
+       u.appendChild(c1);
+        //document.body.appendChild(c1);
+
+        c1.appendChild(L1);
+        //c1.appendChild(L);
+        //u.appendChild(L1);
+        break;
+    case 2:
+      //  document.body.removeChild(c1);
+      //c1=document.body.getElementsByClassName('circle1');
+      let n1=document.querySelector('.circle1');
+      console.log(n1.parentNode.lastChild);
+      
+//        c2=document.createElement('div');
+        u.replaceChild(c2,n1.parentNode.lastChild);
+  //      c2.classList.add('circle2');
+        //c2.innerText='Spin Created';
+        L1.classList.replace("case1-label1","case2-label1");
+        c2.appendChild(L1);
+         c2.appendChild(L2);
+        //c2.appendChild(L);
+        //u.appendChild(L1);
+        //u.appendChild(L2);
+        break;
+    case 3:
+    //document.body.removeChild(c);
+    //c3=document.createElement('div');
+    let n2=document.querySelector('.circle2');
+      console.log(n2.parentNode.lastChild);
+      
+//        c2=document.createElement('div');
+        u.replaceChild(c3,n2.parentNode.lastChild);
+    //document.body.replaceChild(c3,document.body.getElementsByClassName('circle'));
+    //c3.classList.add('circle3');
+    //c3.innerText='Spin Created';
+    L1.classList.replace("case1-label1","case3-label1");
+    L2.classList.replace("case2-label2","case3-label2");
+    //c3.appendChild(L);
+    c3.appendChild(L1);
+    c3.appendChild(L2);
+    c3.appendChild(L3);
+    var t=document.getElementsByClassName(".label2");
+   // var t1=$('.label2').offset();
+   var getele=t.closest(".scircle");
+   console.log(getele);
+    //alert("L2 left: "+t.offset+" "+"t1.left"+" "+"L2 top: "+t.offsetTop+" "+"t1.top");
+    break;
+    case 4:
+    //document.body.removeChild(c);
+    //c4=document.createElement('div');
+    let n3=document.querySelector('.circle3');
+      console.log(n3.parentNode.lastChild);
+      
+//        c2=document.createElement('div');
+        u.replaceChild(c4,n3.parentNode.lastChild);
+    //document.body.c3.replaceChild(c4);
+    //c4.classList.add('circle4');
+    //c4.innerText='Spin Created';
+    L1.classList.replace("case1-label1","case4-label1");
+    L2.classList.replace("case2-label2","case4-label2");
+    L3.classList.replace("case3-label3","case4-label3");
+    //c4.appendChild(L);
+    c4.appendChild(L1);
+    c4.appendChild(L2);
+    c4.appendChild(L3);
+    c4.appendChild(L4);
+    break;
+    case 5:
+        let n4=document.querySelector('.circle4');
+        console.log(n4.parentNode.lastChild);
+        u.replaceChild(c5,n4.parentNode.lastChild);
+      //  c5.innerText='Spin Created';
+      L1.classList.replace("case1-label1","case5-label1");
+    L2.classList.replace("case2-label2","case5-label2");
+    L3.classList.replace("case3-label3","case5-label3");
+    L4.classList.replace("case4-label4","case5-label4");
+        //c5.appendChild(L);
+        c5.appendChild(L1);
+        c5.appendChild(L2);
+        c5.appendChild(L3);
+        c5.appendChild(L4);
+        c5.appendChild(L5);
+        break;    
+    case 6:
+        let n5=document.querySelector('.circle5');
+        u.replaceChild(c6,n5.parentNode.lastChild);
+        //c6.innerText='Spin Created';        
+        L1.classList.replace("case1-label1","case6-label1");
+    L2.classList.replace("case2-label2","case6-label2");
+    L3.classList.replace("case3-label3","case6-label3");
+    L4.classList.replace("case4-label4","case6-label4");
+    L5.classList.replace("case5-label5","case6-label5");
+        //c6.appendChild(L);
+        c6.appendChild(L1);
+        c6.appendChild(L2);
+        c6.appendChild(L3);
+        c6.appendChild(L4);
+        c6.appendChild(L5);
+        c6.appendChild(L6);
+        break;        
+    case 7:
+        let n6=document.querySelector('.circle6');
+        u.replaceChild(c7,n6.parentNode.lastChild);
+        //c7.innerText='Spin Created';        
+        L1.classList.replace("case1-label1","case7-label1");
+    L2.classList.replace("case2-label2","case7-label2");
+    L3.classList.replace("case3-label3","case7-label3");
+    L4.classList.replace("case4-label4","case7-label4");
+    L5.classList.replace("case5-label5","case7-label5");
+    L6.classList.replace("case6-label6","case7-label6");
+        //c7.appendChild(L);
+        c7.appendChild(L1);
+        c7.appendChild(L2);
+        c7.appendChild(L3);
+        c7.appendChild(L4);
+        c7.appendChild(L5);
+        c7.appendChild(L6);
+        c7.appendChild(L7);
+        break;
+    case 8:
+        let n7=document.querySelector('.circle7');
+        u.replaceChild(c8,n7.parentNode.lastChild);
+        //c8.innerText='Spin Created';        
+    L1.classList.replace("case1-label1","case8-label1");
+    L2.classList.replace("case2-label2","case8-label2");
+    L3.classList.replace("case3-label3","case8-label3");
+    L4.classList.replace("case4-label4","case8-label4");
+    L5.classList.replace("case5-label5","case8-label5");
+    L6.classList.replace("case6-label6","case8-label6");
+    L7.classList.replace("case7-label7","case8-label7")
+        //c8.appendChild(L);
+        c8.appendChild(L1);
+        c8.appendChild(L2);
+        c8.appendChild(L3);
+        c8.appendChild(L4);
+        c8.appendChild(L5);
+        c8.appendChild(L6);
+        c8.appendChild(L7);
+        c8.appendChild(L8);
+        break;    
+    case 9:
+        let n8=document.querySelector('.circle8');
+        u.replaceChild(c9,n8.parentNode.lastChild);
+        //c9.innerText='Spin Created';        
+        L1.classList.replace("case1-label1","case9-label1");
+    L2.classList.replace("case2-label2","case9-label2");
+    L3.classList.replace("case3-label3","case9-label3");
+    L4.classList.replace("case4-label4","case9-label4");
+    L5.classList.replace("case5-label5","case9-label5");
+    L6.classList.replace("case6-label6","case9-label6");
+    L7.classList.replace("case7-label7","case9-label7")
+    L8.classList.replace("case8-label8","case9-label8");
+        //c9.appendChild(L);
+        c9.appendChild(L1);
+        c9.appendChild(L2);
+        c9.appendChild(L3);
+        c9.appendChild(L4);
+        c9.appendChild(L5);
+        c9.appendChild(L6);
+        c9.appendChild(L7);
+        c9.appendChild(L8);
+        c9.appendChild(L9);
+        break;
+    case 10:
+        let n9=document.querySelector('.circle9');
+        u.replaceChild(c10,n9.parentNode.lastChild);
+        //c10.innerText='Spin Created';        
+    L1.classList.replace("case1-label1","case10-label1");
+    L2.classList.replace("case2-label2","case10-label2");
+    L3.classList.replace("case3-label3","case10-label3");
+    L4.classList.replace("case4-label4","case10-label4");
+    L5.classList.replace("case5-label5","case10-label5");
+    L6.classList.replace("case6-label6","case10-label6");
+    L7.classList.replace("case7-label7","case10-label7")
+    L8.classList.replace("case8-label8","case10-label8");
+    L9.classList.replace("case9-label9","case10-label9");
+        //c10.appendChild(L);    
+        c10.appendChild(L1);
+        c10.appendChild(L2);
+        c10.appendChild(L3);
+        c10.appendChild(L4);
+        c10.appendChild(L5);
+        c10.appendChild(L6);
+        c10.appendChild(L7);
+        c10.appendChild(L8);
+        c10.appendChild(L9);
+        c10.appendChild(L10);
+        break;
+    case 11:
+        let n10=document.querySelector('.circle10');
+        u.replaceChild(c11,n10.parentNode.lastChild);
+        //c11.innerText='Spin Created';        
+        L1.classList.replace("case1-label1","case11-label1");
+    L2.classList.replace("case2-label2","case11-label2");
+    L3.classList.replace("case3-label3","case11-label3");
+    L4.classList.replace("case4-label4","case11-label4");
+    L5.classList.replace("case5-label5","case11-label5");
+    L6.classList.replace("case6-label6","case11-label6");
+    L7.classList.replace("case7-label7","case11-label7")
+    L8.classList.replace("case8-label8","case11-label8");
+    L9.classList.replace("case9-label9","case11-label9");
+    L10.classList.replace("case10-label10","case11-label10");
+        //c11.appendChild(L);
+        c11.appendChild(L1);
+        c11.appendChild(L2);
+        c11.appendChild(L3);
+        c11.appendChild(L4);
+        c11.appendChild(L5);
+        c11.appendChild(L6);
+        c11.appendChild(L7);
+        c11.appendChild(L8);
+        c11.appendChild(L9);
+        c11.appendChild(L10);
+        c11.appendChild(L11);
+        break;
+    case 12:
+        let n11=document.querySelector('.circle11');
+        u.replaceChild(c12,n11.parentNode.lastChild);
+        //c12.innerText='Spin Created';        
+        L1.classList.replace("case1-label1","case12-label1");
+    L2.classList.replace("case2-label2","case12-label2");
+    L3.classList.replace("case3-label3","case12-label3");
+    L4.classList.replace("case4-label4","case12-label4");
+    L5.classList.replace("case5-label5","case12-label5");
+    L6.classList.replace("case6-label6","case12-label6");
+    L7.classList.replace("case7-label7","case12-label7")
+    L8.classList.replace("case8-label8","case12-label8");
+    L9.classList.replace("case9-label9","case12-label9");
+    L10.classList.replace("case10-label10","case12-label10");
+    L11.classList.replace("case11-label11","case12-label11");
+        //c12.appendChild(L);
+        c12.appendChild(L1);
+        c12.appendChild(L2);
+        c12.appendChild(L3);
+        c12.appendChild(L4);
+        c12.appendChild(L5);
+        c12.appendChild(L6);
+        c12.appendChild(L7);
+        c12.appendChild(L8);
+        c12.appendChild(L9);
+        c12.appendChild(L10);
+        c12.appendChild(L11);
+        c12.appendChild(L12);
+        break;    
+    case 13:
+        let n12=document.querySelector('.circle12');
+        u.replaceChild(c13,n12.parentNode.lastChild);
+        //c13.innerText='Spin Created';        
+        L1.classList.replace("case1-label1","case13-label1");
+    L2.classList.replace("case2-label2","case13-label2");
+    L3.classList.replace("case3-label3","case13-label3");
+    L4.classList.replace("case4-label4","case13-label4");
+    L5.classList.replace("case5-label5","case13-label5");
+    L6.classList.replace("case6-label6","case13-label6");
+    L7.classList.replace("case7-label7","case13-label7")
+    L8.classList.replace("case8-label8","case13-label8");
+    L9.classList.replace("case9-label9","case13-label9");
+    L10.classList.replace("case10-label10","case13-label10");
+    L11.classList.replace("case11-label11","case13-label11");
+    L12.classList.replace("case12-label12","case13-label12");
+        //c13.appendChild(L);
+        c13.appendChild(L1);
+        c13.appendChild(L2);
+        c13.appendChild(L3);
+        c13.appendChild(L4);
+        c13.appendChild(L5);
+        c13.appendChild(L6);
+        c13.appendChild(L7);
+        c13.appendChild(L8);
+        c13.appendChild(L9);
+        c13.appendChild(L10);
+        c13.appendChild(L11);
+        c13.appendChild(L12);
+        c13.appendChild(L13);
+        break;    
+    case 14:
+        let n13=document.querySelector('.circle13');
+        u.replaceChild(c14,n13.parentNode.lastChild);
+        //c14.innerText='Spin Created';        
+        L1.classList.replace("case1-label1","case14-label1");
+    L2.classList.replace("case2-label2","case14-label2");
+    L3.classList.replace("case3-label3","case14-label3");
+    L4.classList.replace("case4-label4","case14-label4");
+    L5.classList.replace("case5-label5","case14-label5");
+    L6.classList.replace("case6-label6","case14-label6");
+    L7.classList.replace("case7-label7","case14-label7")
+    L8.classList.replace("case8-label8","case14-label8");
+    L9.classList.replace("case9-label9","case14-label9");
+    L10.classList.replace("case10-label10","case14-label10");
+    L11.classList.replace("case11-label11","case14-label11");
+    L12.classList.replace("case12-label12","case14-label12");
+    L13.classList.replace("case13-label13","case14-label13");
+        //c14.appendChild(L);
+        c14.appendChild(L1);
+        c14.appendChild(L2);
+        c14.appendChild(L3);
+        c14.appendChild(L4);
+        c14.appendChild(L5);
+        c14.appendChild(L6);
+        c14.appendChild(L7);
+        c14.appendChild(L8);
+        c14.appendChild(L9);
+        c14.appendChild(L10);
+        c14.appendChild(L11);
+        c14.appendChild(L12);
+        c14.appendChild(L13);
+        c14.appendChild(L14);
+        break;    
+    case 15:
+        let n14=document.querySelector('.circle14');
+        u.replaceChild(c15,n14.parentNode.lastChild);
+        //c15.innerText='Spin Created';        
+        L1.classList.replace("case1-label1","case15-label1");
+    L2.classList.replace("case2-label2","case15-label2");
+    L3.classList.replace("case3-label3","case15-label3");
+    L4.classList.replace("case4-label4","case15-label4");
+    L5.classList.replace("case5-label5","case15-label5");
+    L6.classList.replace("case6-label6","case15-label6");
+    L7.classList.replace("case7-label7","case15-label7")
+    L8.classList.replace("case8-label8","case15-label8");
+    L9.classList.replace("case9-label9","case15-label9");
+    L10.classList.replace("case10-label10","case15-label10");
+    L11.classList.replace("case11-label11","case15-label11");
+    L12.classList.replace("case12-label12","case15-label12");
+    L13.classList.replace("case13-label13","case15-label13");
+    L14.classList.replace("case14-label14","case15-label14");
+        //c15.appendChild(L);
+        c15.appendChild(L1);
+        c15.appendChild(L2);
+        c15.appendChild(L3);
+        c15.appendChild(L4);
+        c15.appendChild(L5);
+        c15.appendChild(L6);
+        c15.appendChild(L7);
+        c15.appendChild(L8);
+        c15.appendChild(L9);
+        c15.appendChild(L10);
+        c15.appendChild(L11);
+        c15.appendChild(L12);
+        c15.appendChild(L13);
+        c15.appendChild(L14);
+        c15.appendChild(L15);
+        break;    
+    case 16:
+        let n15=document.querySelector('.circle15');
+        u.replaceChild(c16,n15.parentNode.lastChild);
+        //c16.innerText='Spin Created';        
+        L1.classList.replace("case1-label1","case16-label1");
+    L2.classList.replace("case2-label2","case16-label2");
+    L3.classList.replace("case3-label3","case16-label3");
+    L4.classList.replace("case4-label4","case16-label4");
+    L5.classList.replace("case5-label5","case16-label5");
+    L6.classList.replace("case6-label6","case16-label6");
+    L7.classList.replace("case7-label7","case16-label7")
+    L8.classList.replace("case8-label8","case16-label8");
+    L9.classList.replace("case9-label9","case16-label9");
+    L10.classList.replace("case10-label10","case16-label10");
+    L11.classList.replace("case11-label11","case16-label11");
+    L12.classList.replace("case12-label12","case16-label12");
+    L13.classList.replace("case13-label13","case16-label13");
+    L14.classList.replace("case14-label14","case16-label14");
+    L15.classList.replace("case15-label15","case16-label15");
+        //c16.appendChild(L);
+        c16.appendChild(L1);
+        c16.appendChild(L2);
+        c16.appendChild(L3);
+        c16.appendChild(L4);
+        c16.appendChild(L5);
+        c16.appendChild(L6);
+        c16.appendChild(L7);
+        c16.appendChild(L8);
+        c16.appendChild(L9);
+        c16.appendChild(L10);
+        c16.appendChild(L11);
+        c16.appendChild(L12);
+        c16.appendChild(L13);
+        c16.appendChild(L14);
+        c16.appendChild(L15);
+        c16.appendChild(L16);
+        break;    
+    case 17:
+        let n16=document.querySelector('.circle16');
+        u.replaceChild(c17,n16.parentNode.lastChild);
+        //c17.innerText='Spin Created';        
+        L1.classList.replace("case1-label1","case17-label1");
+    L2.classList.replace("case2-label2","case17-label2");
+    L3.classList.replace("case3-label3","case17-label3");
+    L4.classList.replace("case4-label4","case17-label4");
+    L5.classList.replace("case5-label5","case17-label5");
+    L6.classList.replace("case6-label6","case17-label6");
+    L7.classList.replace("case7-label7","case17-label7")
+    L8.classList.replace("case8-label8","case17-label8");
+    L9.classList.replace("case9-label9","case17-label9");
+    L10.classList.replace("case10-label10","case17-label10");
+    L11.classList.replace("case11-label11","case17-label11");
+    L12.classList.replace("case12-label12","case17-label12");
+    L13.classList.replace("case13-label13","case17-label13");
+    L14.classList.replace("case14-label14","case17-label14");
+    L15.classList.replace("case15-label15","case17-label15");
+    L16.classList.replace("case16-label16","case17-label16");
+        //c17.appendChild(L);
+        c17.appendChild(L1);
+        c17.appendChild(L2);
+        c17.appendChild(L3);
+        c17.appendChild(L4);
+        c17.appendChild(L5);
+        c17.appendChild(L6);
+        c17.appendChild(L7);
+        c17.appendChild(L8);
+        c17.appendChild(L9);
+        c17.appendChild(L10);
+        c17.appendChild(L11);
+        c17.appendChild(L12);
+        c17.appendChild(L13);
+        c17.appendChild(L14);
+        c17.appendChild(L15);
+        c17.appendChild(L16);
+        c17.appendChild(L17);
+        break;
+    case 18:
+        let n17=document.querySelector('.circle17');
+        u.replaceChild(c18,n17.parentNode.lastChild);
+        //c18.innerText='Spin Created';        
+        L1.classList.replace("case1-label1","case18-label1");
+    L2.classList.replace("case2-label2","case18-label2");
+    L3.classList.replace("case3-label3","case18-label3");
+    L4.classList.replace("case4-label4","case18-label4");
+    L5.classList.replace("case5-label5","case18-label5");
+    L6.classList.replace("case6-label6","case18-label6");
+    L7.classList.replace("case7-label7","case18-label7")
+    L8.classList.replace("case8-label8","case18-label8");
+    L9.classList.replace("case9-label9","case18-label9");
+    L10.classList.replace("case10-label10","case18-label10");
+    L11.classList.replace("case11-label11","case18-label11");
+    L12.classList.replace("case12-label12","case18-label12");
+    L13.classList.replace("case13-label13","case18-label13");
+    L14.classList.replace("case14-label14","case18-label14");
+    L15.classList.replace("case15-label15","case18-label15");
+    L16.classList.replace("case16-label16","case18-label16");
+    L17.classList.replace("case17-label17","case18-label17");
+        //c18.appendChild(L);
+        c18.appendChild(L1);
+        c18.appendChild(L2);
+        c18.appendChild(L3);
+        c18.appendChild(L4);
+        c18.appendChild(L5);
+        c18.appendChild(L6);
+        c18.appendChild(L7);
+        c18.appendChild(L8);
+        c18.appendChild(L9);
+        c18.appendChild(L10);
+        c18.appendChild(L11);
+        c18.appendChild(L12);
+        c18.appendChild(L13);
+        c18.appendChild(L14);
+        c18.appendChild(L15);
+        c18.appendChild(L16);
+        c18.appendChild(L17);
+        c18.appendChild(L18);
+        break;        
+    case 19:
+        let n18=document.querySelector('.circle18');
+        u.replaceChild(c19,n18.parentNode.lastChild);
+        //c19.innerText='Spin Created';
+        L1.classList.replace("case1-label1","case19-label1");
+    L2.classList.replace("case2-label2","case19-label2");
+    L3.classList.replace("case3-label3","case19-label3");
+    L4.classList.replace("case4-label4","case19-label4");
+    L5.classList.replace("case5-label5","case19-label5");
+    L6.classList.replace("case6-label6","case19-label6");
+    L7.classList.replace("case7-label7","case19-label7")
+    L8.classList.replace("case8-label8","case19-label8");
+    L9.classList.replace("case9-label9","case19-label9");
+    L10.classList.replace("case10-label10","case19-label10");
+    L11.classList.replace("case11-label11","case19-label11");
+    L12.classList.replace("case12-label12","case19-label12");
+    L13.classList.replace("case13-label13","case19-label13");
+    L14.classList.replace("case14-label14","case19-label14");
+    L15.classList.replace("case15-label15","case19-label15");
+    L16.classList.replace("case16-label16","case19-label16");
+    L17.classList.replace("case17-label17","case19-label17");
+    L18.classList.replace("case18-label18","case19-label18");
+        //c19.appendChild(L);
+        c19.appendChild(L1);
+        c19.appendChild(L2);
+        c19.appendChild(L3);
+        c19.appendChild(L4);
+        c19.appendChild(L5);
+        c19.appendChild(L6);
+        c19.appendChild(L7);
+        c19.appendChild(L8);
+        c19.appendChild(L9);
+        c19.appendChild(L10);
+        c19.appendChild(L11);
+        c19.appendChild(L12);
+        c19.appendChild(L13);
+        c19.appendChild(L14);
+        c19.appendChild(L15);
+        c19.appendChild(L16);
+        c19.appendChild(L17);
+        c19.appendChild(L18);
+        c19.appendChild(L19);
+        break;    
+    case 20:
+        let n19=document.querySelector('.circle19');
+        u.replaceChild(c20,n19.parentNode.lastChild);
+        //c20.innerText='Spin Created';        
+        
+        L1.classList.replace("case1-label1","case20-label1");
+    L2.classList.replace("case2-label2","case20-label2");
+    L3.classList.replace("case3-label3","case20-label3");
+    L4.classList.replace("case4-label4","case20-label4");
+    L5.classList.replace("case5-label5","case20-label5");
+    L6.classList.replace("case6-label6","case20-label6");
+    L7.classList.replace("case7-label7","case20-label7")
+    L8.classList.replace("case8-label8","case20-label8");
+    L9.classList.replace("case9-label9","case20-label9");
+    L10.classList.replace("case10-label10","case20-label10");
+    L11.classList.replace("case11-label11","case20-label11");
+    L12.classList.replace("case12-label12","case20-label12");
+    L13.classList.replace("case13-label13","case20-label13");
+    L14.classList.replace("case14-label14","case20-label14");
+    L15.classList.replace("case15-label15","case20-label15");
+    L16.classList.replace("case16-label16","case20-label16");
+    L17.classList.replace("case17-label17","case20-label17");
+    L18.classList.replace("case18-label18","case20-label18");
+    L19.classList.replace("case19-label19","case20-label19");
+        //c20.appendChild(L);
+        c20.appendChild(L1);
+        c20.appendChild(L2);
+        c20.appendChild(L3);
+        c20.appendChild(L4);
+        c20.appendChild(L5);
+        c20.appendChild(L6);
+        c20.appendChild(L7);
+        c20.appendChild(L8);
+        c20.appendChild(L9);
+        c20.appendChild(L10);
+        c20.appendChild(L11);
+        c20.appendChild(L12);
+        c20.appendChild(L13);
+        c20.appendChild(L14);
+        c20.appendChild(L15);
+        c20.appendChild(L16);
+        c20.appendChild(L17);
+        c20.appendChild(L18);
+        c20.appendChild(L19);
+        c20.appendChild(L20);
+        break;    
+    
+    default:
+    
+        c.classList.add('circle');
+        c.innerText='Spin Created';
+        document.body.appendChild(c);
+        break;    
+        
+}
+}else{
+    alert("Only 20 participants allowed in spin game");
+}
+//var t=$('.circle3').offset();
+//var t=document.getElementsByClassName("label2");
+//alert("L2 left: "+t.left+" "+"L2 top: "+t.top);
+}
+/*let arrow=document.getElementsByClassName('td');
+console.log(arrow);
+arrow.classList.add('scircle');*/
+
+function spin(){
+    let s1=document.querySelector('.table1');
+    console.log(s1);
+    console.log(s1.firstElementChild.firstElementChild);
+    let u=s1.firstElementChild.firstElementChild.lastElementChild;
+    if(u.classList.contains('animationstop')){
+        u.classList.replace('animationstop','animationstart');
+    }else{
+        u.classList.add('animationstart');    
+    }
+       
+    console.log(u);
+    }
+function stop(){
+    let s1=document.querySelector('.table1');
+    console.log(s1);
+    console.log(s1.firstElementChild.firstElementChild);
+    let u=s1.firstElementChild.firstElementChild.lastElementChild;
+    u.classList.replace('animationstart','animationstop');
+    console.log(u);
+}
+</script>
 </head>
-
 <body>
-<div class="item">
-<label> Enter the name:</label>
-<input type="text">
-<input type="submit">
+<div class="game">Spin Game</div>    
+<div class="table1">
+<div class="tr">
+    <div class="td"> Click Start/Stop for Spin
+    <label class="scircle"></label>
+    <button id="" class="spinbutton" onclick="spin()">SPIN</button> <!--inner circle box model & add [click to spin], style align center -->
+    <button id="" class="spinbutton" onclick="stop()">STOP</button> <!--inner circle box model & add [click to spin], style align center -->
+</div>    
+<div class="td"> Spin Game 
+    <br/>Participant List
+    <div class="item">
+        <label> Enter the participant name:</label>
+        <input type="text" id="name" placeholder="Enter Name"/>
+        <button id="cl" onclick="newname()">Add Name</button> <!--outer circle box model & add [1,2,3,....], style align center-->
+        <div id="table1">Chart</div>
 </div>
-
-<div class="area">
-<div class="circle">
-<div class="circle1"></div>
+</div>    
 </div>
-</div>
-
 </body>
-
 </html>
