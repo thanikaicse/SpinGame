@@ -16,7 +16,10 @@ function App() {
   }*/
   const [count,setCount]=useState(1);
   const [count1,setCount1]=useState(0);
-  
+  const [ope,setupdate]=useState([""]);
+  //let ope=new Array(); //check vavlue persistancy issue
+  var k=0;
+
   function randomGenerate(min, max){
     
     //setCount(n=>n+1);
@@ -27,20 +30,23 @@ function AddItem()
 {
    setCount(count+1);
    setCount1(count1+1);
+
    const n=count;
-   const k=count1;
-//   alert("n:"+n+" k:"+k);
-   console.log("Entered AddItems");
+   const k=count1; //check vavlue persistancy issue
+   
+   setupdate([...ope,(document.getElementById('name').value)]);
+   //alert("n:"+n+" k:"+k);
+   //console.log("Entered AddItems");
    const ran1=randomGenerate(1,360)+"deg";
    const ran2=randomGenerate(1,360)+"deg";
    document.documentElement.style.setProperty(`--ran`,`${ran1}`);
    document.documentElement.style.setProperty(`--ra`,`${ran2}`);
-   console.log(ran1);
-   //var ope=new Array();  //check the stmt validity and increment n by 1
+   //console.log(ran1);
+     //check the stmt validity and increment n by 1
 
    //t=document.write("Spin started");
    //document.body.appendChild(t);
-   console.log(randomGenerate(1,360));
+   //console.log(randomGenerate(1,360));
    //alert("Add Function called");
    
   
@@ -60,33 +66,105 @@ function AddItem()
 
    //convert ope to dynamic array
    //ope[k++]= document.getElementById('name').value;
-   ope[k]= document.getElementById('name').value;
-   //setCount1(count1+1);
-  //alert("Ope.length:"+ope.length+"ope[k]"+k+"name"+ope[k]);
-  console.log("Ope.length:"+(ope.length)+"ope[k]"+k+"name"+ope[k]);
-   if(n<=20 && ope.length<=20)
-   {
+   //alert("check1");
+    //check vavlue persistancy issue
+   //alert("check2");
+   //console.log("Ope.length:"+(ope.length)+"ope[k]"+k+"name"+ope[k]);
+   //alert("Ope.length:"+(ope.length)+"ope[k]"+k+"name"+ope[k]);
+   
 
-   for(i=0;i<(ope.length);i++)
+  //setCount1(count1+1);
+  //k=count1;
+  //alert("Ope.length:"+ope.length+"ope[k]"+k+"name"+ope[k]);
+   
+  if(n<=20 && ope.length<=20)
+   {
+    
+    var table1="<table>";
+    var rowSize=2;
+    const column=ope.length;
+    for(i=0;i<(ope.length);i++)
    {
        //alert(ope[i]);
+
+      console.log("column new:"+i+"Name:"+ope[i]);
+     // alert("column new:"+i+"Name:"+ope[i]);
+      //alert(i+" "+ ope[i]);
+           //console.log(j+" "+ ope[j]);
+           //table1.add(`<tr><td>${i+1}</td><td>${value}</td></tr>`);
+           table1+=`<tr>`;
+           table1+=`<td>${i}</td>`;
+           table1+=`<td>${ope[i]}</td></tr>`;
+           //table1+=`</tr>`;
    }
+   table1+="</table>" ; 
+  
+   /*      //ope.forEach((value,i)=>{}
+      for(var j=0;j<ope.length;j++){
+        alert(j+" "+ ope[j]);
+           console.log(j+" "+ ope[j]);
+           //table1.add(`<tr><td>${i+1}</td><td>${value}</td></tr>`);
+           table1+=`<tr>`;
+           table1+=`<td>${j+1}</td>`;
+           table1+=`<td>${ope[j]}</td></tr>`;
+           //table1+=`</tr>`;
+       }
+
+       /*
+       ope.forEach((value,i)=>{
+        alert(i+" "+ ope[i]);
+        console.log(i+" "+ ope[i]);
+        //table1.add(`<tr><td>${i+1}</td><td>${value}</td></tr>`);
+        table1+=`<tr>`;
+        table1+=`<td>${i+1}</td>`;
+        table1+=`<td>${ope[i]}</td></tr>`;
+    });
    //k=parseInt(k)+1;
    
    //convert ope array to Table dynamic create for ope array
    //|No.| Participaten Name|
-  var ope=new Array();
-  var table1="<table><tr>";
-  var rowSize=2;
-   ope.forEach((value,i)=>{
-       //alert(i+" "+ value);
-       //console.log(i+" "+ value);
-       table1+=`<td>${i+1}</td>`;
-       table1+=`<td>${value}</td>`;
-       table1+=`</tr><tr>`;
-   })
-   table1+="</tr></table>" ; 
-  
+  //var ope=new Array();
+*/
+
+// get table column
+
+
+//data=[['No.','Name']];
+// get table heading data
+/*
+const ThData =()=>{
+   alert("key tr");
+   console.log("key tr");
+    return column.map((rowSize)=>{
+        alert(<th key={k}>{k}</th>);
+        console.log(<th key={k}>{k}</th>);
+        return <th key={k}>{k}</th>
+
+    });
+  }
+
+// get table row data
+const tdData =() =>{
+  alert("tr td");
+  console.log(" tr td");
+    return ope.map((ope)=>{
+      return(
+          <tr>
+               {
+                  column.map((k)=>{
+                    alert(<td>{ope[k]}</td>);
+                    console.log(<td>{ope[k]}</td>);
+                      return <td>{ope[k]}</td>
+                  })
+               }
+          </tr>
+      )
+              });
+            }
+*/
+            
+
+
    let c1=document.createElement('div');
    
    c1.classList.add("circle1");
@@ -805,6 +883,14 @@ function AddItem()
     <button onClick={Test}> Test component </button>
     <button onClick={()=>alert("Hi welcome")}> Oncick Test </button>
     <Test/>
+    <table className="table">
+            <thead>
+            <tr>{AddItem.ThData}</tr>
+            </thead>
+            <tbody>
+            {AddItem.tdData}
+            </tbody>
+            </table>
     */ 
   
 
@@ -824,6 +910,7 @@ function AddItem()
             <label> Enter the participant name:</label>
             <input type="text" id="name" placeholder="Enter Name"/>
             <button id="cl" onClick={AddItem}>Add Name</button> 
+            
             <div id="table1">Chart</div>
          </div>
     </div>
