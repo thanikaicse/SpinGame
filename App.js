@@ -34,7 +34,18 @@ function AddItem()
    const n=count;
    const k=count1; //check vavlue persistancy issue
    
-   setupdate([...ope,(document.getElementById('name').value)]);
+   if (count1===0) {
+    let index=0;
+    ope[index]=document.getElementById('name').value;
+    setupdate([...ope]);    
+   } else {
+    setupdate([...ope,(document.getElementById('name').value)]); 
+   }
+
+
+   
+   
+  //}
    //alert("n:"+n+" k:"+k);
    //console.log("Entered AddItems");
    const ran1=randomGenerate(1,360)+"deg";
@@ -93,7 +104,7 @@ function AddItem()
            //console.log(j+" "+ ope[j]);
            //table1.add(`<tr><td>${i+1}</td><td>${value}</td></tr>`);
            table1+=`<tr>`;
-           table1+=`<td>${i}</td>`;
+           table1+=`<td>${i+1}</td>`;
            table1+=`<td>${ope[i]}</td></tr>`;
            //table1+=`</tr>`;
    }
