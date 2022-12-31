@@ -18,7 +18,7 @@ function App() {
   const [count1,setCount1]=useState(0);
   const [ope,setupdate]=useState([""]);
   //let ope=new Array(); //check vavlue persistancy issue
-  var k=0;
+ // var k=0;
 
   function randomGenerate(min, max){
     
@@ -35,11 +35,18 @@ function AddItem()
    const k=count1; //check vavlue persistancy issue
    
    if (count1===0) {
-    let index=0;
-    ope[index]=document.getElementById('name').value;
-    setupdate([...ope]);    
+    //let index=0;
+    ope[count1]=document.getElementById('name').value;
+    console.log("Ope.length:"+(ope.length)+"ope[count1"+count1+"name"+ope[count1]);
+   // setupdate([...ope]);    
+    
+   alert("Ope.length:"+(ope.length)+"ope[count1]"+count1+"name"+ope[count1]);
    } else {
-    setupdate([...ope,(document.getElementById('name').value)]); 
+    ope[count1]=document.getElementById('name').value;
+   // setupdate([...ope,(document.getElementById('name').value)]);
+    console.log("Ope.length:"+(ope.length)+"ope[count1]"+count1+"name"+ope[count1]);
+   alert("Ope.length:"+(ope.length)+"ope[count1]"+count1+"name"+ope[count1]);
+ 
    }
 
 
